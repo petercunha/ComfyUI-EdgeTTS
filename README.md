@@ -52,10 +52,20 @@ install requirment.txt in the ComfyUI-EdgeTTS folder
   ./ComfyUI/python_embeded/python -m pip install -r requirements.txt
   ```
 ## Requirements
-- Python packages (see requirements.txt)
+- Python packages (see `requirements.txt`)
+- FFmpeg on system `PATH` (required by Whisper STT)
+  - Example (Windows PowerShell): `$env:Path += ";F:\\FFmpeg\\bin"` then restart ComfyUI
 - CUDA compatible GPU (optional, for faster Whisper processing)
 
-## Usage Examples
+> [!NOTE]
+> ### Important: torchaudio 2.9+ requires torchcodec
+> If you use `torch/torchaudio` 2.9 or newer, `torchaudio.load/save` requires `torchcodec`.
+
+Recommended fix (match PyTorch 2.9.x):
+```bash
+./ComfyUI/python_embeded/python -m pip uninstall -y torchcodec
+./ComfyUI/python_embeded/python -m pip install --no-cache-dir "torchcodec==0.9"
+```
 
 ### Text to Speech
 1. Add Edge TTS node to workflow
