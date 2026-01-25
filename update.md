@@ -1,5 +1,15 @@
 # ComfyUI-EdgeTTS Update Log
 
+## v1.2.2 (2026/1/25)
+
+### Dependency Compatibility Fixes
+- Added `torchcodec==0.9` to `requirements.txt` for `torchaudio 2.9+`
+- Documented `torch/torchaudio 2.9.x` → `torchcodec 0.9` compatibility
+
+### Whisper STT Prerequisite Clarification
+- Added FFmpeg requirement note to `README.md`
+- Added Windows `PATH` example for FFmpeg setup
+
 ## v1.2.1 (2025/7/23)
 
 ### Voice ID Compatibility Fix
@@ -196,3 +206,4 @@
 - All voices support Neural engine technology
 - Each language typically includes at least one male and one female voice
 - Current voice distribution covers major world languages and regional variants 
+
