@@ -1,5 +1,6 @@
 import os
 import torch
+import torchcodec
 import torchaudio
 import whisper
 import json
@@ -86,4 +87,5 @@ NODE_CLASS_MAPPINGS = {
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "WhisperSTT": "Whisper STT 👂"
+
 } 
