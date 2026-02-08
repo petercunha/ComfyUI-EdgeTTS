@@ -8,6 +8,7 @@ import edge_tts
 import asyncio
 import re
 import torch
+import torchcodec
 import torchaudio
 import json
 
@@ -173,3 +174,4 @@ NODE_CLASS_MAPPINGS = {
 NODE_DISPLAY_NAME_MAPPINGS = {
     "EdgeTTS": "Edge TTS 🔊"
 } 
+
